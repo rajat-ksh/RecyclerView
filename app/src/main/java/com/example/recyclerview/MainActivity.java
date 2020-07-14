@@ -35,8 +35,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -82,13 +80,22 @@ public class MainActivity extends AppCompatActivity implements useradapter.OnIte
                 .make(linearLayout, "Sign in Sucessfull.!!", Snackbar.LENGTH_LONG);
         snackbar.show();
 
+        Setvalues();
+
 
         mShimmerFrameLayout=findViewById(R.id.shimmer_view_container);
+
+
 
         mQueue= Volley.newRequestQueue(this);
         mRecyclerView=findViewById(R.id.View);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        Handledatalist = new ArrayList<>();
+
+
+        parseJSON();
 
         ImageView btn=findViewById(R.id.logout);
 
@@ -100,9 +107,8 @@ public class MainActivity extends AppCompatActivity implements useradapter.OnIte
 
 
 
-        Handledatalist = new ArrayList<>();
-        Setvalues();
-        parseJSON();
+
+
         ConnectivityManager cm =
                 (ConnectivityManager)this.getSystemService(this.CONNECTIVITY_SERVICE);
 

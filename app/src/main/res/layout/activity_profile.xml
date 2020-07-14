@@ -179,108 +179,114 @@
         android:layout_height="1dp"
         android:background="#e4e3e3"/>
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="400sp"
-        android:paddingLeft="40sp"
-        android:paddingBottom="20sp"
 
-        android:layout_marginTop="40sp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:src="@drawable/home"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="400sp"
+                android:paddingLeft="40sp"
+                android:paddingBottom="20sp"
+
+                android:layout_marginTop="40sp"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Address"
-                    android:layout_marginLeft="15sp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textSize="20sp"
-
-                    />
-                <TextView
-                    android:id="@+id/address"
-                    android:layout_marginLeft="15dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Address"
-                    android:textColor="#808080"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textSize="18sp"/>
-            </LinearLayout>
-    </LinearLayout>
-
-    <View
-        android:layout_gravity="center"
-        android:layout_width="250sp"
-        android:layout_height="1dp"
-        android:background="#e4e3e3"/>
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/mapcard"
-        android:layout_marginTop="30sp"
-        android:layout_width="175sp"
-        android:layout_gravity="center"
-        android:layout_height="100sp"
-        app:cardCornerRadius="8sp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/mapback"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:background="#7000"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingBottom="15dp"
-                android:paddingTop="15dp" >
-
-                <TextView
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:src="@drawable/home"/>
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:shadowColor="#000"
-                    android:shadowDx="3"
-                    android:shadowDy="3"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:layout_marginLeft="15sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textSize="20sp"
 
-                    android:shadowRadius="6"
-                    android:text="Location"
-                    android:textColor="#FFF"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="10sp"
-                    android:text="Tap to view Location"
-                    android:textColor="#CCC"
-                    android:textSize="12sp"/>
+                        />
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_marginLeft="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textColor="#808080"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="18sp"/>
+                </LinearLayout>
             </LinearLayout>
-        </RelativeLayout>
+
+            <View
+                android:layout_gravity="center"
+                android:layout_width="250sp"
+                android:layout_height="1dp"
+                android:background="#e4e3e3"/>
 
 
-    </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mapcard"
+                android:layout_marginTop="30sp"
+                android:layout_width="175sp"
+                android:layout_gravity="center"
+                android:layout_height="100sp"
+                app:cardCornerRadius="8sp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mapback"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="#7000"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp" >
 
-</LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:shadowColor="#000"
+                            android:shadowDx="3"
+                            android:shadowDy="3"
+
+                            android:shadowRadius="6"
+                            android:text="Location"
+                            android:textColor="#FFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:text="Tap to view Location"
+                            android:textColor="#CCC"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>
